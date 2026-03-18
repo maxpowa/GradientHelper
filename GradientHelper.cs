@@ -421,7 +421,7 @@ namespace GradientHelper
                 VRageRender.MyRenderProxy.DebugDrawSphere(
                     worldStart,
                     radius,
-                    Color.Yellow,
+                    VRageMath.Color.Yellow,
                     alpha: 0.3f,
                     depthRead: false);
             }
