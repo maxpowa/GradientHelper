@@ -21,7 +21,7 @@ public class Config : INotifyPropertyChanged
     private float maxDistance = 200f;
     private bool applySkin = true;
     private bool debugDraw = false;
-    private InterpolationMode interpolation = InterpolationMode.RGB;
+    private InterpolationMode interpolation = InterpolationMode.CubicLab;
 
     #endregion
 
