@@ -1,0 +1,60 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>disable</Nullable>
+    <OutputType>Library</OutputType>
+    <AssemblyName>GradientHelperPlugin</AssemblyName>
+    <RootNamespace>GradientHelper</RootNamespace>
+    <PlatformTarget>x64</PlatformTarget>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+
+    <SEInstallPath>C:\Steam\steamapps\common\SpaceEngineers\Bin64</SEInstallPath>
+  </PropertyGroup>
+
+  <!-- SE game DLL references -->
+  <ItemGroup>
+    <Reference Include="Sandbox.Common">
+      <HintPath>$(SEInstallPath)\Sandbox.Common.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Sandbox.Game">
+      <HintPath>$(SEInstallPath)\Sandbox.Game.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Sandbox.Graphics">
+      <HintPath>$(SEInstallPath)\Sandbox.Graphics.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="SpaceEngineers.ObjectBuilders">
+      <HintPath>$(SEInstallPath)\SpaceEngineers.ObjectBuilders.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="VRage">
+      <HintPath>$(SEInstallPath)\VRage.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="VRage.Game">
+      <HintPath>$(SEInstallPath)\VRage.Game.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="VRage.Input">
+      <HintPath>$(SEInstallPath)\VRage.Input.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="VRage.Library">
+      <HintPath>$(SEInstallPath)\VRage.Library.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="VRage.Math">
+      <HintPath>$(SEInstallPath)\VRage.Math.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Lib.Harmony" Version="2.4.2" />
+  </ItemGroup>
+
+</Project>

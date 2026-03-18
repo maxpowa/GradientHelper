@@ -1,0 +1,46 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <UseWindowsForms>true</UseWindowsForms>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+    <RestoreAdditionalProjectSources>https://ng.zznty.ru/v3/index.json</RestoreAdditionalProjectSources>
+    <EnableDynamicLoading>true</EnableDynamicLoading>
+    <NoWarn>$(NoWarn);MSB3246;NU1701</NoWarn>
+    <PackageType>CringePlugin</PackageType>
+    <Authors>GradientHelper</Authors>
+    <PackageId>Plugin.GradientHelper</PackageId>
+    <AssemblyName>Plugin.GradientHelper</AssemblyName>
+    <Title>Gradient Helper</Title>
+    <Description>Create color gradients across blocks on a grid. Supports linear and radial modes with four interpolation options (RGB, HSV, Lab, Perceptual).
+
+Usage:
+  1. Pre-paint two blocks with the desired start and end colors.
+  2. Press Ctrl+G for linear gradient mode (or Ctrl+R for radial).
+  3. Paint action on the first block to pick the START position and color.
+  4. Paint action on a second block to pick the END position and color.
+  5. Paint any blocks on the grid to apply gradient-interpolated colors.
+  6. Newly placed blocks are also auto-colored to match the gradient.
+  7. Press the hotkey again to exit gradient mode.
+
+Hotkeys: Ctrl+G (linear), Ctrl+R (radial), Ctrl+T (cycle interpolation), Ctrl+K (toggle apply skin).
+Configure hotkeys and settings in the plugin settings dialog.</Description>
+    <LangVersion>preview</LangVersion>
+    <RootNamespace>GradientHelper</RootNamespace>
+    <PackageIcon>icon.png</PackageIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CringePlugins" Version="*" ExcludeAssets="runtime; native" />
+    <PackageReference Include="CringePlugins.MSBuild" Version="*" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="icon.png" Pack="true" PackagePath="" />
+  </ItemGroup>
+
+</Project>
