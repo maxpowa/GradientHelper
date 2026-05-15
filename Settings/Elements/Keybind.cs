@@ -115,7 +115,7 @@ internal class KeybindAttribute : Attribute, IElement
         if (userData.Device == MyGuiInputDeviceEnum.Mouse)
             messageText = MyCommonTexts.AssignControlMouse;
 
-        var screenClass = typeof(MyGuiScreenOptionsControls).GetNestedType(
+        var screenClass = typeof(MyGuiScreenOptionsMouseKeyboard).GetNestedType(
             "MyGuiControlAssignKeyMessageBox",
             BindingFlags.NonPublic);
 
